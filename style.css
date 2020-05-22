@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #DADBD8;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    margin: 70px;
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.middle {
+    animation-delay: -2s;
+}
+
+@keyframes animation {
+    0% {
+        border-radius: 50%;
+        background-color: #DE8E7A;
+    }
+    25% {
+        background-color: #E1737C;
+        transform: rotate(-45deg);
+        border-radius: 50% 0 50% 50%;
+    }
+    50% {
+        background-color: #C0505C;
+        border-radius: 0 0 50% 50%;
+        transform: rotate(-60deg);
+    }
+    75% {
+        background-color: #DE8E7A;
+        border-radius: 0 0 50% 0;
+        transform: rotate(-135deg);
+    }
+    100% {
+        background-color: #F07657;
+        border-radius: 0;
+        transform: rotate(-170deg);
+    }
+}
